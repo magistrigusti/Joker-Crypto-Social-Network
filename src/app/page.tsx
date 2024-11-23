@@ -11,7 +11,7 @@ const Homepage = () => {
         <LeftMenu />
       </div>
 
-      <div className="w-full lg:w-[70%] xl:w-[50%]">
+      <div className="w-full lg:w-[80%] xl:w-[80%]">
         <div className="flex flex-col gap-6 p-4">
           <Stories />
           <AddPost />
@@ -19,7 +19,7 @@ const Homepage = () => {
         </div>
       </div>
 
-      <div className="hidden lg:block w-[30%]">
+      <div className="hidden lg:block w-[20%]">
         <RightMenu />
       </div>
     </div>

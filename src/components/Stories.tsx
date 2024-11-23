@@ -29,6 +29,12 @@ const Stories = () => {
             width={80} height={80} src="https://pixels.com/images/homepageProductCanvasPrint002.jpg" alt="" />
             <span className="font-medium">Sara</span>
         </div>
+
+        <div className="flex flex-col items-center gap-2 cursor-pointer">
+          <Image className="w-20 h-20 rounded-full ring-2" 
+            width={80} height={80} src="https://pixels.com/images/overview/apparel/mensTshirts002.jpg" alt="" />
+            <span className="font-medium">Jack McBride</span>
+        </div>
       </div>
     </div>
   )
