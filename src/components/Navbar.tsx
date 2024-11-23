@@ -17,22 +17,30 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <div className="hidden md:flex w-[50%] text-sm">
+      <div className="hidden md:flex w-[50%] text-sm items-center justify-between">
         <div className="flex gap-6 text-gray-600">
           <Link className="flex items-center gap-2" href="/">
             <Image className="w-4 h-4" src="/home.png" alt="Homepage" width={16} height={16} />
-            <span>Homepage</span>
+            <span>Home</span>
           </Link>
 
           <Link className="flex items-center gap-2" href="/">
             <Image className="w-4 h-4" src="/friends.png" alt="Friendspage" width={16} height={16} />
-            <span>Friendspage</span>
+            <span>Friends</span>
           </Link>
 
           <Link className="flex items-center gap-2" href="/">
             <Image className="w-4 h-4" src="/stories.png" alt="Storiespage" width={16} height={16} />
-            <span>Storiespage</span>
+            <span>Stories</span>
           </Link>
+        </div>
+
+        <div className="hidden xl:flex p-2 bg-slate-100 items-center rounded-xl">
+          <input className="bg-transparent outline-none"
+            type="text" placeholder="search..." 
+          />
+
+          <Image src="/search.png" alt="" width={14} height={14} />
         </div>
       </div>
 
@@ -50,15 +58,15 @@ const Navbar = () => {
         <ClerkLoaded>
           <SignedIn>
             <div className="cursor-pointer">
-              <Image src="/people.png" alt="" width={20} height={20} />
+              <Image src="/people.png" alt="" width={24} height={24} />
             </div>
 
             <div className="cursor-pointer">
-              <Image src="/messages,png" alt="" width={20} height={20} />
+              <Image src="/messages.png" alt="" width={24} height={24} />
             </div>
 
             <div className="cursor-pointer">
-              <Image src="/notifications.png" alt="" width={20} height={20} />
+              <Image src="/notifications.png" alt="" width={24} height={24} />
             </div>
             <UserButton />
           </SignedIn>
