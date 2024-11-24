@@ -19,7 +19,7 @@ const Homepage = () => {
         </div>
       </div>
 
-      <div className="hidden lg:block w-[20%]">
+      <div className="hidden lg:block w-[35%] p-4">
         <RightMenu />
       </div>
     </div>
