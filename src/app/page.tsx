@@ -7,7 +7,7 @@ import Feed from "@/components/Feed";
 const Homepage = () => {
   return (
     <div className='flex gap-6'>
-      <div className="hidden xl:block w-[20%]">
+      <div className="hidden lg:block w-[25%]">
         <LeftMenu />
       </div>
 
