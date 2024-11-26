@@ -7,19 +7,19 @@ import Feed from "@/components/Feed";
 const Homepage = () => {
   return (
     <div className='flex gap-6'>
-      <div className="hidden lg:block w-[25%]">
-        <LeftMenu />
+      <div className="hidden lg:block w-[25%] p-4">
+        <LeftMenu type="home" />
       </div>
 
-      <div className="w-full lg:w-[80%] xl:w-[80%]">
-        <div className="flex flex-col gap-6 p-4">
+      <div className="w-full lg:w-[70%] xl:w-[50%]">
+        <div className="flex flex-col  p-4">
           <Stories />
           <AddPost />
           <Feed />
         </div>
       </div>
 
-      <div className="hidden lg:block w-[35%] p-4">
+      <div className="hidden lg:block w-[30%] p-4">
         <RightMenu />
       </div>
     </div>

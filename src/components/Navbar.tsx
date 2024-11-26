@@ -13,9 +13,10 @@ const Navbar = () => {
     <div className="h-24 flex items-center justify-between">
       <div className="md:hidden lg:block w-[20%]">
         <Link className="font-bold text-xl text-blue-600" href='/'>
-          JOKER NETWORK
+          <Image className="z-index-1 flex gap-6" src="/joker-logo-black.png" alt="" width={320} height={270} />
         </Link>
       </div>
+      
 
       <div className="hidden md:flex w-[50%] text-sm items-center justify-between">
         <div className="flex gap-6 text-gray-600">
@@ -35,6 +36,8 @@ const Navbar = () => {
           </Link>
         </div>
 
+        
+
         <div className="hidden xl:flex p-2 bg-slate-100 items-center rounded-xl">
           <input className="bg-transparent outline-none"
             type="text" placeholder="search..." 
@@ -43,6 +46,8 @@ const Navbar = () => {
           <Image src="/search.png" alt="" width={14} height={14} />
         </div>
       </div>
+      
+      
 
       <div className="flex items-center gap-4 xl:gap-8 justify-end w-[30%]">
         <ClerkLoading>

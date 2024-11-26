@@ -5,8 +5,8 @@ import RightMenu from "@/components/RightMenu";
 const ProfilePage = () => {
   return (
     <div className='flex gap-6 pt-6'>
-      <div className="hidden xl:block w-[20%]">
-        <LeftMenu />
+      <div className="hidden xl:block w-[25%]">
+        <LeftMenu type="profile" />
       </div>
 
       <div className="w-full lg:w-[70%] xl:w-[50%]">
@@ -15,7 +15,7 @@ const ProfilePage = () => {
         </div>
       </div>
 
-      <div className="hidden lg:block w-[30%]">
+      <div className="hidden lg:block w-[25%]">
         <RightMenu userId="test" />
       </div>
     </div>
