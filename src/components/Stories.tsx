@@ -14,8 +14,8 @@ const Stories = () => {
 
         <div className="flex flex-col items-center gap-2 cursor-pointer">
           <Image className="w-20 h-20 rounded-full ring-2" 
-            width={80} height={80} src="https://pixels.com/images/overview/homeDecor/coffeeMugs001.jpg" alt="" />
-            <span className="font-medium">Mary</span>
+            width={80} height={80} src="https://pixels.com/images/overview/homeDecor/showerCurtains002.jpg" alt="" />
+            <span className="font-medium">Mary Weaver</span>
         </div>
 
         <div className="flex flex-col items-center gap-2 cursor-pointer">
