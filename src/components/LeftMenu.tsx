@@ -87,6 +87,14 @@ const LeftMenu = ({type}:{type: "home" | "profile"}) => {
         <Link href="/" 
           className="flex items-center gap-4 p-2 rounded-lg hover:bg-slate-100"
         >
+          <Image src="/joker-poker.png" alt="" width={24} height={24} />
+          <span>Casino</span>
+        </Link>
+        <hr className="border-t-1 border-gray-50w-36 self-center" />
+
+        <Link href="/" 
+          className="flex items-center gap-4 p-2 rounded-lg hover:bg-slate-100"
+        >
           <Image src="/settings.png" alt="" width={20} height={20} />
           <span>Settings</span>
         </Link>
