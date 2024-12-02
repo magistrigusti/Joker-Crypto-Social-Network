@@ -38,6 +38,13 @@ model User {
   posts Post[]
   comments Comment[]
   likes Like[]
+  followers Follower[] @relation("UserFollowers")
+  following Follower[] @relation("UserFollowing")
+  followRequestsSent FollowRequest[] @relation("FollowRequestsSent")
+  followRequestsReceived FollowRequest[] @relation("FollowRequestsReceived")
+  blocks Block[] @relation("BlocksSent")
+  blockedBy Block[] @relation("BlocksReceived")
+  stories Story[]
 }
 
 model Post {
@@ -77,7 +84,38 @@ model Like {
 model Follower {
   id Int @id @default(autoincrement())
   createAt DateTime @default(now())
-  follower User @relation(fields: [followerId], references: [id], onDelete: Cascade)
+  follower User @relation("UserFollowers", fields: [followerId], references: [id], onDelete: Cascade)
   followerId String
-  following User @relation(fields: [followingId], eferences: [id], onDelete: Cascade);
+  following User @relation("UserFollowing", fields: [followingId], references: [id], onDelete: Cascade)
+  followingId String
+}
+
+model FollowRequest {
+  id Int @id @default (autoincrement())
+  createdAt DateTime @default(now())
+  sender User @relation("FollowRequestsSent", fields: [senderId], references: [id], onDelete: Cascade)
+  senderId String
+  receiver User @relation("FollowRequestsReceived", fields: [receiverId], references: [id], onDelete: Cascade)
+  receiverId String
+
+  @@unique([senderId, receiverId])
+}
+
+model Block {
+  id Int @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  blocker User @relation("BlocksSent", fields: [blockerId], references: [id], onDelete: Cascade)
+  blockerId String
+  blocked User @relation("BlocksReceived", fields: [blockedId], references: [id], onDelete: Cascade)
+  blockedId String
+
+  @@unique([blockerId, blockedId])
+}
+
+model Story {
+  id Int @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  expiresAt DateTime
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String @unique
 }
