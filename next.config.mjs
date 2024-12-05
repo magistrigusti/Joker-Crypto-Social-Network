@@ -2,7 +2,9 @@
 const nextConfig = {
   experimental: {
     reactCompiler: true,
-    ppr: 'incremental'
+    ppr: 'incremental',
+    appDir: true, // Объединяем experimental параметры
+    turbo: true  // Включаем Turbopack
   },
   images: {
     remotePatterns: [
@@ -21,4 +23,3 @@ const nextConfig = {
 };
 
 export default nextConfig;
-
