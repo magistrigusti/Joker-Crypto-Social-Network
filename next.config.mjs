@@ -11,7 +11,14 @@ const nextConfig = {
         hostname: "pixels.com",
       }
     ]
-  }
+  },
+  reactStrictMode: true,
+  serverRuntimeConfig: {
+    clerk: {
+      apiKey: process.env.CLERK_API_KEY,
+    },
+  },
 };
 
 export default nextConfig;
+
